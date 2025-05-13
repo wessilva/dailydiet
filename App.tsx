@@ -5,6 +5,7 @@ import theme from '@theme/index';
 
 import { HomeScreen } from '@screens/HomeScreen';
 import { Loading } from '@components/Loading';
+import { RegisterMeal } from '@screens/RegisterMeal';
 
 export default function App() {
   const [fontsLoaded] = useFonts([NunitoSans_400Regular, NunitoSans_700Bold]);
