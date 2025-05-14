@@ -24,7 +24,19 @@
       ],
       "@utils/*": [
         "./src/utils/*"
-      ]
+      ],
+      "@navigation": [
+        "./src/navigation/*"
+      ],
+      "@store/*": [
+        "./src/store/*"
+      ],
+      "@hoocks/*": [
+        "./src/hoocks/*"
+      ],
+      "@types/*": [
+        "./src/types/*"
+      ],
     }
   }
 }

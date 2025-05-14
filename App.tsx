@@ -1,19 +1,34 @@
+import { Provider } from 'react-redux';
+import { store } from '@store/index';
+
 import { useFonts, NunitoSans_400Regular, NunitoSans_700Bold } from '@expo-google-fonts/nunito-sans'
+
+import { NavigationContainer } from '@react-navigation/native';
 
 import { ThemeProvider } from 'styled-components';
 import theme from '@theme/index';
 
-import { HomeScreen } from '@screens/HomeScreen';
+import { EstruturaNavi } from '@routes/EstruturaNavi';
+
+
 import { Loading } from '@components/Loading';
-import { RegisterMeal } from '@screens/RegisterMeal';
 
 export default function App() {
   const [fontsLoaded] = useFonts([NunitoSans_400Regular, NunitoSans_700Bold]);
 
   return (
-    <ThemeProvider theme={theme}>
-      {fontsLoaded ? <HomeScreen /> : <Loading />}
-    </ThemeProvider>
+    <Provider store={store}>
+      <ThemeProvider theme={theme}>
+        {fontsLoaded ? (
+          <NavigationContainer>
+            <EstruturaNavi />
+          </NavigationContainer>
+
+        ) : (
+          <Loading />
+        )}
+      </ThemeProvider>
+    </Provider>
   );
 }
 

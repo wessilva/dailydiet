@@ -1,6 +1,7 @@
 import { Text, View } from "react-native";
 import { Container, Diet, DietButton, DietText, MealDate, MealDateInput, MealDateSection, MealDateText, MealDescription, MealDescriptionInput, MealName, MealNameInput, MealTime, MealTimeInput, MealTimeText, } from "./styled";
 import { DietTextProps } from "./styled";
+import { RegisterMealButton } from "@components/RegisterMealButton";
 
 
 type Props = {
@@ -31,6 +32,7 @@ export function FormRegisterMeal({ title }: Props) {
                     <DietButton title={title} />
                 </View>
             </Diet>
+            <RegisterMealButton />
         </Container>
     )
 }
