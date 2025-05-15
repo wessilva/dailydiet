@@ -2,7 +2,7 @@ import { Text } from "react-native";
 import { ArrowLeftIcon, Button, Container, Header, Title } from "./styles";
 import { FormRegisterMeal } from "@components/FormAddMeal";
 
-import { useAppNavigation } from "@hoocks/useNavigation";
+import { useAppNavigation } from "../../hoocks/useNavigation";
 
 
 

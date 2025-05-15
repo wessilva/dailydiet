@@ -10,9 +10,9 @@ export const Container = styled.View`
     margin-bottom: 32px;
 `
 
-export const Logo = styled.Image.attrs({ source: require("../../assets/Logo.png") })`
+export const Logo = styled.Image.attrs({ source: require("../../../assets/Logo.png") })`
     
 `
 
-export const PerfilImage = styled.Image.attrs({ source: require("../../assets/Ellipse.png") })`
+export const PerfilImage = styled.Image.attrs({ source: require("../../../assets/Ellipse.png") })`
 `
