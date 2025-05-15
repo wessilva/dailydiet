@@ -9,7 +9,7 @@ export type DietTextProps = {
 
 export const Container = styled.View`
     flex: 1;
-    background-color: ${({ theme }) => theme.COLORS.GRAY_5};
+    background-color: ${({ theme }) => theme.COLORS.GRAY_7};
     padding: 24px;
     border-radius: 24px;
     

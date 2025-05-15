@@ -1,6 +1,6 @@
 // src/components/pages/HomePage.tsx
 import React, { useState } from 'react';
-import { MainTemplate } from '../templates/MainTemplate';
+import { HomeTeamplte } from '../templates/HomeTemplate';
 import { Text } from 'react-native';
 
 import { Header } from "@components/atoms/Header";
@@ -19,10 +19,11 @@ export const HomePage: React.FC = () => {
     }
 
     return (
-        <MainTemplate
+        <HomeTeamplte
             header={<Header />}
+            percent={<Percent />}
             mealsList={<MealsList />}
             footer={<AddMealButton onPress={handleAddMeal} />}>
-        </MainTemplate>
+        </HomeTeamplte>
     );
 };
