@@ -3,27 +3,30 @@ import React, { useState } from 'react';
 import { HomeTeamplte } from '../templates/HomeTemplate';
 import { Text } from 'react-native';
 
-import { Header } from "@components/atoms/Header";
-import { Percent } from "@components/Percent";
-import { MealsList } from "@components/atoms/MealsList";
-import { AddMealButton } from "@components/AddMealButton";
+import { HeaderHome } from "@components/molecules/headerHome";
+import { Infopercent } from "@components/molecules/infoPercent";
+import { MealsList } from "@components/organisms/mealsList";
 
 import { useAppNavigation } from "../../hoocks/useNavigation";
+import { RegularTextComponent } from '@components/atoms/regularText';
+import { MainButton } from '@components/molecules/mainButton';
 
 export const HomePage: React.FC = () => {
 
     const navigation = useAppNavigation();
 
     const handleAddMeal = () => {
-        navigation.navigate("registerMeal");
+        console.log('Funciounou');
     }
 
     return (
         <HomeTeamplte
-            header={<Header />}
-            percent={<Percent />}
+            header={<HeaderHome />}
+            percent={<Infopercent />}
+            title={<RegularTextComponent text='Refeições' />}
             mealsList={<MealsList />}
-            footer={<AddMealButton onPress={handleAddMeal} />}>
+            footer={<MainButton onPress={handleAddMeal} />}
+        >
         </HomeTeamplte>
     );
 };
